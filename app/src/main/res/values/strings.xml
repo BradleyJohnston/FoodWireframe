@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food Wireframe</string>
+    <string name="placeHolder">Place Holder Text</string>
+    <string name="sandwichOne">Sandwich One</string>
+    <string name="sandwichTwo">Sandwich Two</string>
+    <string name="sandwichThree">Sandwich Three</string>
+</resources>
