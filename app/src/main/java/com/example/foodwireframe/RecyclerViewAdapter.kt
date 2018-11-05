@@ -1,7 +1,6 @@
 package com.example.foodwireframe
 
 import android.content.Context
-import com.example.foodwireframe.R.id.parent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +8,11 @@ import android.view.ViewGroup
 import kotlinx.android.synthetic.main.sandwich_layout.view.*
 
 
-class RecyclerViewAdapter(val items: ArrayList<View>, val context: Context)
+class RecyclerViewAdapter(val items: ArrayList<String>, val context: Context)
     : RecyclerView.Adapter<ViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.foodName, (viewGroup), false))
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.sandwich_layout, p0, false))
     }
 
     override fun getItemCount(): Int {
@@ -21,7 +20,7 @@ class RecyclerViewAdapter(val items: ArrayList<View>, val context: Context)
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.foodItem = items.get(p1)
+        p0.foodItem.textView.text = items.get(p1)
     }
 
 }
