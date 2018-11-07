@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import kotlinx.android.synthetic.main.sandwich_layout.view.*
 
 
@@ -20,13 +21,13 @@ class RecyclerViewAdapter(val items: ArrayList<String>, val context: Context)
     }
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        p0.foodItem.textView.text = items.get(p1)
+        p0.foodItem.text = items.get(p1)
     }
 
 }
 
 class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
-    var foodItem: View = view.foodName
+    var foodItem: TextView = view.foodNameTV
 }
 
 

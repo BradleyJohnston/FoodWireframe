@@ -3,6 +3,7 @@ package com.example.foodwireframe
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity (private var offScreen: Boolean = false) : AppCompatActivity() {
@@ -14,17 +15,17 @@ class MainActivity (private var offScreen: Boolean = false) : AppCompatActivity(
     var menuItems: RecyclerView = rvMenu
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        print("Main Activity: OnCreate Start")
+        Log.i("Main Activity:", "Begin")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         print("Main Activity: Recycler view stuff")
         menu = ArrayList<String>()
         getMenu()
-        menuItems.adapter = RecyclerViewAdapter(menu, this)
+
+        menuItems.adapter = RecyclerViewAdapter(menu, applicationContext)
         print("Main Activity: OnCreate End")
     }
-
 
     fun getMenu() {
         menu.add("Hawaiian")
