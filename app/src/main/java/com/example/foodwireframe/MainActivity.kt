@@ -2,9 +2,7 @@ package com.example.foodwireframe
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
 import android.util.Log
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity (private var offScreen: Boolean = false) : AppCompatActivity() {
 
@@ -12,7 +10,7 @@ class MainActivity (private var offScreen: Boolean = false) : AppCompatActivity(
     lateinit var purchasedItems: ArrayList<FoodItem>
     lateinit var menu: ArrayList<String>
 
-    var menuItems: RecyclerView = rvMenu
+  //  var menuItems: RecyclerView = rvMenu
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i("Main Activity:", "Begin")
@@ -23,7 +21,7 @@ class MainActivity (private var offScreen: Boolean = false) : AppCompatActivity(
         menu = ArrayList<String>()
         getMenu()
 
-        menuItems.adapter = RecyclerViewAdapter(menu, applicationContext)
+        //menuItems.adapter = RecyclerViewAdapter(menu, applicationContext)
         print("Main Activity: OnCreate End")
     }
 
