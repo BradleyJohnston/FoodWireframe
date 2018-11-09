@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Food Wireframe</string>
-    <string name="placeHolder">Place Holder Text</string>
-    <string name="sandwichOne">Sandwich One</string>
-    <string name="sandwichTwo">Sandwich Two</string>
-    <string name="sandwichThree">Sandwich Three</string>
+    <string name="cowboy">Cowboy Combo</string>
+    <string name="american">American Combo</string>
+    <string name="mediteranean">Mediteranean Combo </string>
+    <string name="classic">Classic Combo</string>
+    <string name="custom">Custom Order</string>
 </resources>
