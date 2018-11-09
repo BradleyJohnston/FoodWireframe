@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground">
+    tools:context=".PurchaseActivity"
+    style="@style/myBox"
+    android:background="@color/colorBackground"
+    android:onClick="onCloseActivity">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="173dp"
-        android:layout_height="165dp"
+        android:layout_width="252dp"
+        android:layout_height="311dp"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="8dp"
-        android:background="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         android:gravity="center"
         android:text="Purchase screen"
         android:textAlignment="center"
@@ -23,5 +25,6 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.414"
+        android:onClick="onCloseActivity"/>
 </android.support.constraint.ConstraintLayout>
